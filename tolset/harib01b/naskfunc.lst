@@ -1,0 +1,21 @@
+     1 00000000                                 ; naskfunc
+     2 00000000                                 ; TAB=4
+     3 00000000                                 
+     4 00000000                                 [FORMAT "WCOFF"]				; オブジェクトファイルを作るモード	
+     5 00000000                                 [INSTRSET "i486p"]				; 486の命令まで使いたいという記述
+     6 00000000                                 [BITS 32]						; 32ビットモード用の機械語を作らせる
+     7 00000000                                 [FILE "naskfunc.nas"]			; ソースファイル名情報
+     8 00000000                                 
+     9 00000000                                 		GLOBAL	_io_hlt,_write_mem8
+    10 00000000                                 
+    11                                          [SECTION .text]
+    12 00000000                                 
+    13 00000000                                 _io_hlt:	; void io_hlt(void);
+    14 00000000 F4                              		HLT
+    15 00000001 C3                              		RET
+    16 00000002                                 
+    17 00000002                                 _write_mem8:	; void write_mem8(int addr, int data);
+    18 00000002 8B 4C 24 04                     		MOV		ECX,[ESP+4]		; [ESP+4]にaddrが入っているのでそれをECXに読み込む
+    19 00000006 8A 44 24 08                     		MOV		AL,[ESP+8]		; [ESP+8]にdataが入っているのでそれをALに読み込む
+    20 0000000A 88 01                           		MOV		[ECX],AL
+    21 0000000C C3                              		RET
