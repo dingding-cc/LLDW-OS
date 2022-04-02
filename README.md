@@ -1,14 +1,20 @@
 # 学习c语言并自制操作系统
 
-**目的：**为了更好合作促进学习创建该兴趣项目
+![](http://cqkj-dingding-monitor.oss-cn-hangzhou.aliyuncs.com/30day%2F%E8%87%AA%E5%88%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%B0%8F%E7%BB%84logo.jpg?Expires=1652481610&OSSAccessKeyId=LTAI5tBoKk25Z19ndnkkt9zp&Signature=uGPwbQr%2BRdzRRd45nnMcLjVDy2I%3D)
 
-**启发：**其灵感来源于日本人川合秀实的自制osaka系统，具体可参考其作品《30天自制操作系统》一书
+## 前言
+
+其灵感来源于日本人川合秀实的自制osaka系统，具体可参考其作品《30天自制操作系统》一书
 
 ```html
 https://baike.baidu.com/item/osask/2976322
 ```
 
-**内容：**对于需要开发的主要内容做如下简单说明
+本项目的初衷就是想在此基础上简化操作系统制作流程，使其适用于大众学习了解，此其一；另外，为了创作出适合具体开放环境的操作系统。如果从兴趣的角度讲，可以供单片机爱好者适用，也契合当下的元宇宙理念以及即将普及的智慧家居。
+
+## 《30天自制操作系统》简要内容
+
+对于需要开发的主要内容做如下简单说明
 
 #### DAY1
 
