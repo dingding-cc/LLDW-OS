@@ -20,7 +20,7 @@ jobs:
         mkdir release
         cp helloos.img release
         echo "strDate=$(Get-Date)"
-        echo "strDate=$(Get-Date)" >> $GITHUB_ENV
+        echo "2022-04-07" >> $GITHUB_ENV
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
