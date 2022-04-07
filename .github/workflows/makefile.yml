@@ -19,16 +19,16 @@ jobs:
         make
         mkdir release
         cp helloos.img release
-        echo "strDate=$(Get-Date)"
-        echo "2022-04-07" >> $GITHUB_ENV
+        echo Get-Date
+        date = Get-Date
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{ env.strDate }}
+        tag: $date
         file: release/helloos.img
         file_glob: true
         overwrite: true
-        release_name: ${{ env.strDate }} 自动发布
+        release_name: $date 自动发布
 
