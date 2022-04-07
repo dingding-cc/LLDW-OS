@@ -1,0 +1,28 @@
+     1 00000000                                 [FORMAT "WCOFF"]
+     2 00000000                                 [INSTRSET "i486p"]
+     3 00000000                                 [OPTIMIZE 1]
+     4 00000000                                 [OPTION 1]
+     5 00000000                                 [BITS 32]
+     6 00000000                                 	EXTERN	_io_hlt
+     7 00000000                                 [FILE "bootpack.c"]
+     8                                          [SECTION .text]
+     9 00000000                                 	GLOBAL	_HariMain
+    10 00000000                                 _HariMain:
+    11 00000000 55                              	PUSH	EBP
+    12 00000001 31 C9                           	XOR	ECX,ECX
+    13 00000003 89 E5                           	MOV	EBP,ESP
+    14 00000005 53                              	PUSH	EBX
+    15 00000006 50                              	PUSH	EAX
+    16 00000007                                 L6:
+    17 00000007 89 C8                           	MOV	EAX,ECX
+    18 00000009 BA 00000010                     	MOV	EDX,16
+    19 0000000E 89 D3                           	MOV	EBX,EDX
+    20 00000010 99                              	CDQ
+    21 00000011 F7 FB                           	IDIV	EBX
+    22 00000013 88 91 000A0000                  	MOV	BYTE [655360+ECX],DL
+    23 00000019 41                              	INC	ECX
+    24 0000001A 81 F9 0000FFFF                  	CMP	ECX,65535
+    25 00000020 7E E5                           	JLE	L6
+    26 00000022                                 L7:
+    27 00000022 E8 [00000000]                   	CALL	_io_hlt
+    28 00000027 EB F9                           	JMP	L7
