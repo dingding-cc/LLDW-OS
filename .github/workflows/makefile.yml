@@ -19,13 +19,13 @@ jobs:
         mkdir release
         cp helloos.img release
         
-    - name: Create GitHub release
-      uses: marvinpinto/action-automatic-releases@latest
+    - name: Upload release asset
+      uses: svenstaro/upload-release-action@v2
       with:
-        repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: ${{env.strDate}}
-        title: ${{env.strDate}} 自动发布
-        prerelease: false
-        files: |
-          release/helloos.img
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: release/*
+        tag: ${{env.strDate}}
+        file_glob: true
+        overwrite: true
+        release_name: ${{env.strDate}} 自动发布
 
