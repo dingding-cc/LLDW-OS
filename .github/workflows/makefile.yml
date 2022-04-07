@@ -19,8 +19,8 @@ jobs:
         make
         mkdir release
         cp helloos.img release
-        echo Get-Date
-        date = Get-Date
+        echo $(Get-Date)
+        date = $(Get-Date)
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
