@@ -14,10 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Building
+      shell: pwsh
       run: | 
         make
         mkdir release
-        cp helloos.img release
+        copy helloos.img release
         echo "strDate=$(echo %date:~0,4%-%date:~5,2%-%date:~8,2%)" >> $GITHUB_ENV
         
     - name: Upload release asset
