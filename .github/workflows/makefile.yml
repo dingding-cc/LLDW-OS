@@ -19,6 +19,7 @@ jobs:
         make
         mkdir release
         cp helloos.img release
+        echo "strDate=$(Get-Date)"
         echo "strDate=$(Get-Date)" >> $GITHUB_ENV
         
     - name: Upload release asset
@@ -29,5 +30,5 @@ jobs:
         file: release/helloos.img
         file_glob: true
         overwrite: true
-        release_name: ${{env.strDate}} 自动发布
+        release_name: ${{ env.strDate }} 自动发布
 
