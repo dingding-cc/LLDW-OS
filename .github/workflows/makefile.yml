@@ -23,8 +23,8 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: release/*
         tag: ${{env.strDate}}
+        file: release/helloos.img
         file_glob: true
         overwrite: true
         release_name: ${{env.strDate}} 自动发布
