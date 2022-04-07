@@ -13,6 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
-    - name: configure
-      run: make
+    - name: Building
+      run: |
+        make
+        mkdir release
+        cp main release/main
+    - name: Uploading
+      uses: actions/upload-artifact@v1
+      with:
+        name: release_linux
+        path: release
