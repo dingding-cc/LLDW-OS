@@ -18,12 +18,14 @@ jobs:
         make
         mkdir release
         cp helloos.img release
+        echo "strDate=$(TZ=UTC-8 date +%Y-%m-%d)" >> $GITHUB_ENV
+        echo "strDevice=$(echo $DEVICE | awk '{print toupper($0)}')" >> $GITHUB_ENV
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{env.strDate}}
+        tag: ${{ env.strDate }}
         file: release/helloos.img
         file_glob: true
         overwrite: true
