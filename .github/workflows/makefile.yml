@@ -18,8 +18,8 @@ jobs:
       run: | 
         make
         mkdir release
-        copy helloos.img release
-        echo "strDate=$(echo %date:~0,4%-%date:~5,2%-%date:~8,2%)" >> $GITHUB_ENV
+        cp helloos.img release
+        echo "strDate=$(Get-Date)" >> $GITHUB_ENV
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
