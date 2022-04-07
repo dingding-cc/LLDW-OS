@@ -14,5 +14,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Building
-      run: make
-    - uses: actions/create-release@v1
+      run: | 
+        make
+        mkdir release
+        cp helloos.img release
+    - name: Uploading
+      uses: actions/upload-artifact@v1
+      with:
+        name: release_os
+        path: release
