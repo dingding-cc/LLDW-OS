@@ -17,7 +17,6 @@ jobs:
       run: |
         make
         mkdir release
-        cp main release/main
     - name: Uploading
       uses: actions/upload-artifact@v1
       with:
