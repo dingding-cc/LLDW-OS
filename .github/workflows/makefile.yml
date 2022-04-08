@@ -2,9 +2,9 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dlr-os ]
   pull_request:
-    branches: [ main ]
+    branches: [ dlr-os ]
 
 jobs:
   build:
