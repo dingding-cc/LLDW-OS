@@ -20,6 +20,7 @@ jobs:
         mkdir release
         cp helloos.img release
         echo "action_state=2021-04-08" >> $GITHUB_ENV
+        echo ${{ env.action_state }}
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
