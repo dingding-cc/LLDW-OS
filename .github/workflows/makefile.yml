@@ -22,7 +22,7 @@ jobs:
         
     - name: Get date
       id: date
-      run: echo "::set-output name=today::$(date +'%Y-%m-%d')"
+      run: echo "::set-output name=today::$(date +'%Y-%m-%d %H:%M')"
         
     - name: Create GitHub release
       uses: marvinpinto/action-automatic-releases@latest
