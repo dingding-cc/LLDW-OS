@@ -30,6 +30,6 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: ${{ steps.date.outputs.today }}
         title: ${{ steps.date.outputs.today }} 自动发布
-        prerelease: true
+        prerelease: False
         files: |
           release/helloos.img
