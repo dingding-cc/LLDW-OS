@@ -32,4 +32,4 @@ jobs:
         title: ${{ steps.date.outputs.today }} 自动发布
         prerelease: true
         files: |
-          release/helloos.im
+          release/helloos.img
