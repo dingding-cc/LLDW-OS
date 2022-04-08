@@ -19,13 +19,15 @@ jobs:
         make
         mkdir release
         cp helloos.img release
+      env: 
+        Date: $(Get-Date)
         
     - name: Create GitHub release
       uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
-        automatic_release_tag: $(Get-Date)
-        title: $(Get-Date) 自动发布
+        automatic_release_tag: ${{ env.Date }}
+        title: ${{ env.Date }} 自动发布
         prerelease: true
         files: |
           release/helloos.im
