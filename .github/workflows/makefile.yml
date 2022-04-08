@@ -19,7 +19,6 @@ jobs:
         make
         mkdir release
         cp helloos.img release
-        echo $(Get-Date)
         echo "action_state=$(Get-Date)" >> $GITHUB_ENV
         
     - name: Upload release asset
