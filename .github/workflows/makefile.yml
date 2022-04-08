@@ -20,7 +20,7 @@ jobs:
         mkdir release
         cp helloos.img release
         echo $(Get-Date)
-        echo "action_state=Get-Date" >> $GITHUB_ENV
+        echo "action_state=$(Get-Date)" >> $GITHUB_ENV
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
