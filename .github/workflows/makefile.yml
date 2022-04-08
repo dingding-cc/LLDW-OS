@@ -2,9 +2,9 @@ name: Makefile CI
 
 on:
   push:
-    branches: [ dlr-os ]
+    branches: [ dlr-os ]   # 记得改这里的分支名称
   pull_request:
-    branches: [ dlr-os ]
+    branches: [ dlr-os ]   # 记得改这里的分支名称
 
 jobs:
   build:
@@ -21,6 +21,7 @@ jobs:
         make
         mkdir release
         cp helloos.img release
+# 到这里结束
         
     - name: Get date
       id: date
