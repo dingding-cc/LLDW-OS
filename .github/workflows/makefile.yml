@@ -1,0 +1,36 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Building
+      shell: pwsh
+      run: | 
+        make
+        mkdir release
+        cp helloos.img release
+        
+    - name: Get date
+      id: date
+      run: echo "::set-output name=today::$(date +'%Y-%m-%d')"
+           echo "::set-output name=todays::$(date +'%Y-%m-%d-%H-%M')"
+        
+    - name: Create GitHub release
+      uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: ${{ steps.date.outputs.todays }}
+        title: ${{ steps.date.outputs.today }} 自动发布
+        prerelease: False
+        files: |
+          release/helloos.img
