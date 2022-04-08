@@ -20,15 +20,15 @@ jobs:
         mkdir release
         cp helloos.img release
         echo $(Get-Date)
-        date = $(Get-Date)
+        echo "action_state=Get-Date" >> $GITHUB_ENV
         
     - name: Upload release asset
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        tag: $date
+        tag: ${{ env.action_state }}
         file: release/helloos.img
         file_glob: true
         overwrite: true
-        release_name: $date 自动发布
+        release_name: ${{ env.action_state }} 自动发布
 
