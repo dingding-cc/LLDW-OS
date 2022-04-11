@@ -101,7 +101,7 @@ fin:
 
 errmsg:
 		DB		0x0a, 0x0a		; 换行两次
-		DB		"load error"
+		DB		"load error,please check code."
 		DB		0x0a			; 换行
 		DB		0
 
