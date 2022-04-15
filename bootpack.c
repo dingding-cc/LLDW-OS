@@ -3,6 +3,7 @@
 #include "bootpack.h"
 #include <stdio.h>
 
+extern "C"
 extern struct FIFO8 keyfifo, mousefifo;
 void enable_mouse(void);
 void init_keyboard(void);

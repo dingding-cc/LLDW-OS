@@ -18,7 +18,7 @@ jobs:
     - name: Building
       shell: pwsh
       run: | 
-        ./make.bat
+        make
         mkdir release
         cp helloos.img release
 # 到这里结束
