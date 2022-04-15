@@ -1,19 +1,19 @@
 format:
-	/* ‚±‚ÌƒZƒNƒVƒ‡ƒ“‚ÅƒŠƒ“ƒN‚Ì•ûj‚ð‹Lq */
+	/* ï¿½ï¿½ï¿½ÌƒZï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Åƒï¿½ï¿½ï¿½ï¿½Nï¿½Ì•ï¿½ï¿½jï¿½ï¿½ï¿½Lï¿½q */
 	code(align:1, logic:0x24,      file:0x24);
 	data(align:4, logic:stack_end, file:code_end);
 
 file:
-	/* ‚±‚ÌƒZƒNƒVƒ‡ƒ“‚ÅƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚É‘‚«‚«‚ê‚È‚©‚Á‚½
-		.objƒtƒ@ƒCƒ‹A.libƒtƒ@ƒCƒ‹‚ð‹LÚ */
-	/* ‚È‚¨A‚±‚ÌƒZƒNƒVƒ‡ƒ“‚Íƒtƒ‹ƒpƒX‚Å‘‚¢‚Ä‚à‚æ‚¢B */
-	/* —áF  c:/osask/gg00libc.lib;  */
-	../z_tools/haribote/harilibc.lib;
-	../z_tools/haribote/golibc.lib;
+	/* ï¿½ï¿½ï¿½ÌƒZï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ÅƒRï¿½}ï¿½ï¿½ï¿½hï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½Éï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½
+		.objï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½A.libï¿½tï¿½@ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Lï¿½ï¿½ */
+	/* ï¿½È‚ï¿½ï¿½Aï¿½ï¿½ï¿½ÌƒZï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Íƒtï¿½ï¿½ï¿½pï¿½Xï¿½Åï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½æ‚¢ï¿½B */
+	/* ï¿½ï¿½F  c:/osask/gg00libc.lib;  */
+	./z_tools/haribote/harilibc.lib;
+	./z_tools/haribote/golibc.lib;
 
 label:
-	/* •K‚¸ƒŠƒ“ƒN‚µ‚È‚¯‚ê‚Î‚¢‚¯‚È‚¢ƒ‰ƒxƒ‹‚ðŽw’è */
-	/* ƒGƒ“ƒgƒŠƒ|ƒCƒ“ƒg‚ðŽw’è‚·‚ê‚Î‚¢‚¢‚ÆŽv‚Á‚Ä‚­‚¾‚³‚¢ */
+	/* ï¿½Kï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½Î‚ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½xï¿½ï¿½ï¿½ï¿½ï¿½wï¿½ï¿½ */
+	/* ï¿½Gï¿½ï¿½ï¿½gï¿½ï¿½ï¿½|ï¿½Cï¿½ï¿½ï¿½gï¿½ï¿½ï¿½wï¿½è‚·ï¿½ï¿½Î‚ï¿½ï¿½ï¿½ï¿½ÆŽvï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 	_HariStartup;
 
-	/* ã‹L3ƒZƒNƒVƒ‡ƒ“‚Ì‡˜‚Í“ü‚ê‘Ö‚¦‚Ä‚Í‚¢‚¯‚Ü‚¹‚ñ! */
+	/* ï¿½ï¿½L3ï¿½Zï¿½Nï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½Í“ï¿½ï¿½ï¿½Ö‚ï¿½ï¿½Ä‚Í‚ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½! */
