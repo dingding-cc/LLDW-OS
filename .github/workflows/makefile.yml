@@ -20,7 +20,8 @@ jobs:
       run: | 
         make
         mkdir release
-        cp helloos.img release
+        cp haribote.img release
+
 # 到这里结束
         
     - name: Get date
@@ -36,4 +37,4 @@ jobs:
         title: ${{ steps.date.outputs.today }} 自动发布
         prerelease: False
         files: |
-          release/helloos.img
+          release/haribote.img
