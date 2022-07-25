@@ -1,6 +1,6 @@
 # 学习c语言并自制操作系统
 
-![](http://cqkj-dingding-monitor.oss-cn-hangzhou.aliyuncs.com/30day%2F%E8%87%AA%E5%88%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%B0%8F%E7%BB%84logo.jpg?Expires=1652481610&OSSAccessKeyId=LTAI5tBoKk25Z19ndnkkt9zp&Signature=uGPwbQr%2BRdzRRd45nnMcLjVDy2I%3D)
+![自制操作系统小组logo](http://cqkj-dingding-monitor.oss-cn-hangzhou.aliyuncs.com/img/自制操作系统小组logo.jpg)
 
 ## 前言
 
@@ -47,30 +47,6 @@ https://baike.baidu.com/item/osask/2976322
 | DAY27                    |   修复点“x”无法关闭窗口的小bug，保护应用程序，整理源代码。   |
 | DAY28                    | alloca(对esp做减法的函数)，文件操作API,命令行API，日文的文字显示。 |
 | DAY29 & DAY30            | 这两天都是在做应用程序，主要是代码，讲解很少，就合起来写了，notrec(非矩阵窗口)，bball(画球)，invader(外星人游戏,就是小蜜蜂），tek_getseze & tek_decomp(文件压缩，制作成tek格式),calc(计算器),tview(文本阅览),mmlplay(音乐播放器),gview(图片阅览). |
-
-
-
-#### 
-
-
-
-#### 
-
-
-
-#### 
-
-
-
-#### 
-
-
-
-#### 
-
-
-
-#### 
 
 
 
