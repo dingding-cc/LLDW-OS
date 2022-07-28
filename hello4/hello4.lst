@@ -1,0 +1,26 @@
+     1 00000000                                 [FORMAT "WCOFF"]
+     2 00000000                                 [INSTRSET "i486p"]
+     3 00000000                                 [OPTIMIZE 1]
+     4 00000000                                 [OPTION 1]
+     5 00000000                                 [BITS 32]
+     6 00000000                                 	EXTERN	_printf
+     7 00000000                                 	EXTERN	_exit
+     8 00000000                                 [FILE "hello4.c"]
+     9                                          [SECTION .data]
+    10 00000000                                 LC0:
+    11 00000000 61 61 61 00                     	DB	"aaa",0x00
+    12 00000004                                 LC1:
+    13 00000004 68 65 6C 6C 6F 2C 20 77 6F 72   	DB	"hello, world : %s %d",0x0A,0x00
+       0000000E 6C 64 20 3A 20 25 73 20 25 64 
+       00000018 0A 00 
+    14                                          [SECTION .text]
+    15 00000000                                 	GLOBAL	_HariMain
+    16 00000000                                 _HariMain:
+    17 00000000 55                              	PUSH	EBP
+    18 00000001 89 E5                           	MOV	EBP,ESP
+    19 00000003 6A 0A                           	PUSH	10
+    20 00000005 68 [00000000]                   	PUSH	LC0
+    21 0000000A 68 [00000004]                   	PUSH	LC1
+    22 0000000F E8 [00000000]                   	CALL	_printf
+    23 00000014 6A 00                           	PUSH	0
+    24 00000016 E8 [00000000]                   	CALL	_exit

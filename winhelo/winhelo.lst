@@ -1,0 +1,37 @@
+     1 00000000                                 [FORMAT "WCOFF"]
+     2 00000000                                 [INSTRSET "i486p"]
+     3 00000000                                 [OPTIMIZE 1]
+     4 00000000                                 [OPTION 1]
+     5 00000000                                 [BITS 32]
+     6 00000000                                 	EXTERN	__alloca
+     7 00000000                                 	EXTERN	_api_openwin
+     8 00000000                                 	EXTERN	_api_getkey
+     9 00000000                                 	EXTERN	_api_end
+    10 00000000                                 [FILE "winhelo.c"]
+    11                                          [SECTION .data]
+    12 00000000                                 LC0:
+    13 00000000 68 65 6C 6C 6F 00               	DB	"hello",0x00
+    14                                          [SECTION .text]
+    15 00000000                                 	GLOBAL	_HariMain
+    16 00000000                                 _HariMain:
+    17 00000000 55                              	PUSH	EBP
+    18 00000001 B8 00001D50                     	MOV	EAX,7504
+    19 00000006 89 E5                           	MOV	EBP,ESP
+    20 00000008 E8 [00000000]                   	CALL	__alloca
+    21 0000000D 68 [00000000]                   	PUSH	LC0
+    22 00000012 6A FF                           	PUSH	-1
+    23 00000014 8D 85 FFFFE2B0                  	LEA	EAX,DWORD [-7504+EBP]
+    24 0000001A 6A 32                           	PUSH	50
+    25 0000001C 68 00000096                     	PUSH	150
+    26 00000021 50                              	PUSH	EAX
+    27 00000022 E8 [00000000]                   	CALL	_api_openwin
+    28 00000027 83 C4 14                        	ADD	ESP,20
+    29 0000002A                                 L2:
+    30 0000002A 6A 01                           	PUSH	1
+    31 0000002C E8 [00000000]                   	CALL	_api_getkey
+    32 00000031 5A                              	POP	EDX
+    33 00000032 83 F8 0A                        	CMP	EAX,10
+    34 00000035 75 F3                           	JNE	L2
+    35 00000037 E8 [00000000]                   	CALL	_api_end
+    36 0000003C C9                              	LEAVE
+    37 0000003D C3                              	RET
